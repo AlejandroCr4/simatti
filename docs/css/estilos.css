@@ -1,0 +1,388 @@
+/*llamato a las dos funtes que se usaran en la pagina*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+
+/*declaracion de la variable para el color principal de la pagina*/
+:root{
+    /*--simatti: #2e5a90;*/
+    /*rojo #f05f40
+    rojo ##ff4343
+    rojo claro #d04447
+    
+    morado #563d7c
+    morado claro #7952b3*/
+    --simatti: #2a5b98;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.fontb{
+    font-family: 'Boogaloo';
+}
+
+.navbar-nav .nav-link{
+    color: rgba(255,255,255,.75)!important;;
+}
+
+.bodie, .administrador, .docente{
+    min-height: 100vh;
+    position: relative;
+    background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    
+    /*font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;*/
+}
+
+.bodie{
+    background-image: url("../img/fondo.png");
+}
+
+/* estilos para el inicio de sesion de los administrativos */
+.administrador{
+    background-image: url(../img/fondoa.jpg);
+}
+
+/* estilos para el inicio de sesion de los padres */
+.docente{
+    background-image: url(../img/fondod.jpg);
+}
+
+.filtro{
+   /* background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-image: linear-gradient(0deg, transparent 0%, rgba(21, 27, 38, 0.5) 100%);*/
+    background-image: linear-gradient(0deg, #00000038 0%, rgba(21, 27, 38, 0.83) 100%);
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.error{
+    background-color: var(--simatti);
+}
+
+
+.carousel-item img{
+    filter: brightness(60%);
+}
+
+
+.inicios{
+    margin-top: 20px;
+ 
+}
+
+.alto{
+    min-height: 100%;
+}
+
+.header{
+    background-image: url(../img/fondo.png);
+    min-height: 200px;
+}
+
+.body{
+    background-image: url(../img/fondo2.jpeg);
+    min-height: 500px;
+}
+
+
+.foot{
+    background-image: url(../img/fondo3.jpeg);
+    min-height: 500px;
+}
+
+.footer{
+    background-image: url(../img/zoologico4.jpeg);
+    min-height: 500px;
+}
+
+.header, .body, .foot, .footer{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Boogaloo';
+}
+
+
+
+.info{
+    text-align: center;
+    padding: 40px 70px;
+    background-color: var(--simatti);
+    color: #fafafa;
+}
+
+.infowhite{
+    text-align: center;
+    padding: 40px 70px;
+    background-color: #ddd;
+    color: #fafafa;
+    margin-bottom: 5px;
+}
+
+.start{
+    width: 100%;
+    text-align: center;
+    color: #fafafa;
+    font-size: 70px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--simatti);
+    padding: 20px;
+}
+
+.start p{
+    font-size: 17px;
+    letter-spacing: 0;
+    font-family: sans-serif;
+    text-transform: none;
+    text-align: center;
+    padding: 10px 10px;
+    color: #fafafa;
+}
+
+.start .division{
+    color: #fafafa;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.arise{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #fafafa;
+    font-size: 50px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+}
+
+
+.infor{
+    text-align: left
+}
+
+.infor h2{
+    text-align: center;
+}
+	
+.portada{
+	font-family: 'Boogaloo', sans-serif;
+    width: auto;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.portada img{
+    width: 250px
+}
+
+.portada h1{
+	font-size: 90px;
+}
+	
+.portada p{
+	font-size: 30px;
+}
+	
+.formulario h1 { 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pass  { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+.formulario{
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center; 
+    font-size: 20px; 
+    padding: 25px;
+    width: 100%;
+    max-width: 385px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Boogaloo', sans-serif;
+}
+
+
+
+.asignatura{
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px; 
+    padding-top: 30px;
+    width: 300px;
+    min-height: 100px;
+    margin: 0;
+    font-family: 'Boogaloo', sans-serif;
+}
+
+
+.box{
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    padding: 40px;
+    max-width: 600px;
+}
+
+
+.box2{
+    /*background-color: #323639;*/
+    /*background-color: #101010f2;*/
+    background-color: #ffffff85;
+    max-width: 900px;
+    border-radius: 7px;
+    border: 1px #242424 solid;
+    padding: 20px;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.box2::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*.box:hover{
+    -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+    -webkit-transition: all 0.1s ease 0.1s; 
+transition: all 0.1s ease 0.1s; 
+}
+*/
+.box1{
+    background-color: #fffffff2;
+    border-radius: 7px;
+    font-size: 16px; 
+    max-height: 250px;
+    overflow: auto;
+}
+
+.box1::-webkit-scrollbar{
+    width: 4px;
+    background: lightgray;
+    border-radius: 7px;
+}
+
+.box1::-webkit-scrollbar-thumb{
+    width: 4px;
+    background: gray;
+    border-radius: 2px;
+}
+
+/*configuracion para el contenedor en el que se van a ver las tareeas*/
+.tarea{
+    background-color: #fffffff2;
+    border-radius: 7px;
+    font-size: 16px; 
+    padding: 50px;
+}
+
+
+.box3{
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px; 
+    padding-left: 30px;
+    padding-right: 250px;
+    padding-top: 40px;
+    width: 300px;
+    min-height: 100px;
+    margin: 0;
+    background-position: 20px;
+    font-family: 'Boogaloo', sans-serif;
+}
+. box3 a:hover{
+    -webkit-transform: scale(1.2);
+    -webkit-transition: all 0.1s ease 0.1s; 
+}
+
+.box4{
+    width: 100%;	
+}
+
+.logos{
+	width: 100px;
+
+}
+
+/*Estilos para formularios*/
+
+input{
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.formulario input[type=text], input[type=password], input[type=number], input[type=email]{
+	width: 100%; 
+	max-width: 100%;
+	height: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	margin: auto;
+	border-bottom: var(--simatti);
+	border-radius: 5px;
+	border-bottom-style: solid;
+	margin-bottom: 15px; 
+}
+
+.formulario{
+    text-align: left;
+    font-size: 18px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.formulario label{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.btn-first {
+    color: #fff;
+    background-color: var(--simatti);
+    border-color: var(--simatti);
+}
+
+.boton1 {
+	width: 100%;
+	color: #ffffff;
+	border-radius: 5px;
+    background-color: var(--simatti);
+	margin-top: 20px;
+}
+
+.foott{
+    background-color: var(--simatti);
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 45px;
+    padding: 14px;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif;
+}
+

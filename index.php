@@ -15,14 +15,14 @@
                 <a class="nav-item nav-link" href="#aboutus">¿Quienes somos?</a>
                 <a class="nav-item nav-link " href="#infor">FAQ</a>
             </div>
-            <?php if(!isset($_SESSION["nombre"])){?>
+            <?php if(!isset($_SESSION['usuario'])){?>
             <div class="navbar-nav text-center">
                 <a class="nav-item nav-link" href="registro.php"><i class="fas fa-user"></i> Registrate</a>
             </div>
             <?php } else { ?>
             <div class="navbar-nav text-center">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> <?php echo $_SESSION['nombre']?>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> <?php echo $_SESSION['usuario']['nombre']?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Mi cuenta</a>
@@ -83,6 +83,8 @@
             <p class="wow fadeInUp">Esta es una plataforma enfocada al desarrollo de tareas y actividades con participacion activa de estudiantes, estudiantes y padres de familia o acudientes.<br>
                 Si eres profesor o administrativo inicia sesion dando click en algunas de los botones de abajo<br>
                 Si eres estudiante o acudiente da click en iniciar como estudiante</p>
+                <?php
+            if(!isset($_SESSION['usuario'])){ ?>
             <h4 class="text-center wow fadeInUp">Iniciar como:</h4>
             <div class="text-center btn-group row d-flex flex-row justify-content-center wow fadeInUp">
                 <input class="inicios btn btn-lg btn-outline-light" type="button" value="Estudiante" onclick="location.href='ingreso.php';">
@@ -90,6 +92,11 @@
                 <input class="inicios btn btn-lg btn-outline-light" id="aboutus" type="button" value="Docente" onclick="location.href='ingresod.php';">
                 <input class="inicios btn btn-lg btn-outline-light" type="button" value="Administrador" onclick="location.href='ingresoa.php';">
             </div>
+                <?php } else{ ?>
+                <div class="text-center">
+                    <p class="display-2 text-success"> Ya iniciaste sesion</p>
+                </div>
+               <?php } ?>
         </div>
     </div>
 

@@ -1,3 +1,15 @@
+<?php
+if(isset($_SESSION['usuario'])){
+    if($_SESSION['usuario']['curso']==6){
+        header('location:inicio.php');
+    } 
+    else if($_SESSION['usuario']['curso']==2){
+        header('location:index.php');
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <?php include 'view/head.php'; ?>
@@ -19,13 +31,13 @@
 
             <div class="col-sm-6">
                 <div class="formulario p-5 mb-5">
-                    <form action="login.php" method="post">
+                    <form action="" id="login">
                         <h1>INICIAR SESIÓN</h1>
                         <label for="nombre"> USUARIO:</label><br>
-                        <input type="text" name="nombre" required="required"><br>
+                        <input type="text" name="nombre" pattern="[A-Za-z0-9_-]{1,30}" title="Caracteres no admitidos" required="required"><br>
                         <label for="identificacion">CONTRASEÑA:</label><br>
-                        <input type="password" name="password" required="required"><br>
-                        <input class="btn boton1" type="submit" name="submit" value="ENTRAR">
+                        <input type="password" name="password" pattern="[A-Za-z0-9_-]{1,30}" title="Caracteres no admitidos" required="required"><br>
+                        <input class="btn boton1" type="submit" value="ENTRAR">
                         <a href="registro.php"><input type="button" class="btn boton1" value="REGISTRARSE">
                         </a><br><br>
                         <p id="pass"><a href="registro.php"> ¿Olvidaste tu contraseña? </a></p>

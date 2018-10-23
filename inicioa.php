@@ -14,35 +14,7 @@ if($varsesion==null || $varsesion = ''){
 
 <body class="docente">
    <div class="filtro">
-		<nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: #2e5a90;">
-		  <a class="navbar-brand" href="#">Simatti</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-		  	<span class="navbar-toggler-icon"></span>
-		  </button>
-
-		  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-		    <div class="navbar-nav mr-auto ml-auto text-center">
-		      <a class="nav-item nav-link active" href="#">Docentes</a>
-		      <a class="nav-item nav-link" href="#">Buscar</a>
-		      <a class="nav-item nav-link" href="#">Agregar</a>
-		      <a class="nav-item nav-link" href="#">Eliminar</a>
-		    </div>
-
-        <div class="navbar-nav text-center">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> <?php echo $_SESSION['nombrea']?>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Mi cuenta</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Configuración</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="logouta.php"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
-                </div>
-            </li>
-        </div>
-
-		  </div>
-		</nav><br>
+		<?php include 'view/navadmin.php'; ?>
 
 	<div class="container mt-3">
 		<div class="row">

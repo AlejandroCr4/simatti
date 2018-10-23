@@ -11,15 +11,18 @@
 	$filas=mysqli_num_rows($result);
 	
     if($filas>0){
-    echo "<script>
+        echo "<script>
 	alert('Bienvenido, $nombrea');
-	location.href='inicioa.php'</script>";
+	location.href='inicioa.php'
+    </script>";
     }
+
     else{
 		echo "<script>
 	alert('Datos incorrectos');
-	location.href='ingresoa.php'</script>";
+	location.href='ingresoa.php'
+    </script>";
 
     } 
 mysqli_free_result($result);
-mysqli_close($conexion);	
+mysqli_close($conexion);

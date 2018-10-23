@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <?php include 'view/head.php' ?>
 <body class="error">
    <?php include 'view/navbar.php'; ?>

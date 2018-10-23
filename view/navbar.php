@@ -5,7 +5,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <!--se ejecuta en caso de que no haya ninguna sesion-->
-<?php if(!isset($_SESSION["nombre"])){?>
+<?php if(!isset($_SESSION['usuario'])){?>
     <div class="navbar-nav mx-auto text-center">
             <a class="nav-item nav-link" href="index.php"><i class="fas fa-home"></i> Inicio</a>
         </div>
@@ -21,7 +21,7 @@
             </div>
         <div class="navbar-nav text-center">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> <?php echo $_SESSION['nombre']?>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> <?php echo $_SESSION['usuario']['nombre']?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Mi cuenta</a>

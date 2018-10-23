@@ -1,11 +1,23 @@
 ﻿<?php
-session_start();
+
+
+if(isset($_SESSION['usuario'])){
+    if($_SESSION['usuario']['curso']==6){
+        header('location:inicio.php');
+    } 
+    else if($_SESSION['usuario']['curso']==2){
+        header('location:index.php');
+    }
+}
+
+/*session_start();
 error_reporting(0);
 $varsesion = $_SESSION['nombre'];
 
 if($varsesion==null || $varsesion = ''){
 	header("location:ingreso.php");
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +28,11 @@ if($varsesion==null || $varsesion = ''){
         <?php include 'view/navbar.php'; ?>
 
         <div class="container mt-4 pb-5">
-
+<script>
+    toastr.success('<?php echo $_SESSION['usuario']['nombre'] ?>', 'Bienvenido',{
+        "positionClass": "toast-bottom-right"
+    });
+</script>
 
             <div class="card mb-5">
                 <div class="form-row">
@@ -31,7 +47,7 @@ if($varsesion==null || $varsesion = ''){
                             </div>
                             <div class="card-body">
                                 <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="btn btn-first">Nuevas notificaciones <span class="badge badge-danger">2</span></a>
+                                <a href="#" class="btn btn-first">Nuevas notificaciones</a>
                             </div>
                         </div>
                     </div>
